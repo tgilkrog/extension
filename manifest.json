@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Wextension",
+  "version": "1.0",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["scripting", "storage", "tabs", "activeTab"],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "content_security_policy": {
+   "extension_pages": "script-src 'self'; object-src 'self'; style-src 'self' https://cdnjs.cloudflare.com;"
+  }
+}
+  

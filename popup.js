@@ -79,7 +79,7 @@ function createField(field = { value: '', collapsed: false }) {
   gitlabBtn.addEventListener('click', () => {
     const value = input.value.trim();
     if (value) {
-      const url = `https://gitlab.com/wexo/sw6/${encodeURIComponent(value)}`;
+      const url = `https://gitlab.wexo.io/sw6/projects/${encodeURIComponent(value)}`;
       chrome.tabs.create({ url });
     }
   });

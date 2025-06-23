@@ -11,28 +11,13 @@ html, body {
     padding: 10px;
 }
 
-.topBanner #add-field {
-    background-color: #232631;
-    color: #FFFFFF;
-    border: none;
-    border-radius: 6px;
-    padding: 5px 10px;
-    font-size: 16px;
-    height: 35px;
-    margin: auto 0;
-}
-
-.topBanner #add-field:hover {
-    cursor: pointer;
-}
-
-.popup_title {
+.topBanner .popup_title {
     text-align: center;
-    color: #FFFFFF;
+    color: #B3a7f7;
     margin-top: 0px;
-    padding: 10px 0px;
+    padding: 5px 0px;
     margin-bottom: 0px;
-    margin-left: 25px;
+    margin-left: 5px;
 }
 
 #fields-container {
@@ -41,6 +26,8 @@ html, body {
 
 .wrapper {
     min-height: 350px;
+    max-height: 350px;
+    overflow-y: auto;
 }
 
 .wrapper .line-item {
@@ -74,8 +61,8 @@ html, body {
     text-align: left;
     border: none;
     width: 100%;
-    font-size: 14px;
-    color: white;
+    font-size: 18px;
+    color: #B3A7F7;
     font-weight: bold;
 }
 
@@ -100,17 +87,17 @@ html, body {
 }
 
 .wrapper .line-item .button-group-container:nth-child(1) {
-    background-color: rgba(59, 130, 246, 0.1);
+    background-color: rgba(59, 130, 246, 0.2);
     border-bottom-left-radius: 6px;
 }
 .wrapper .line-item .button-group-container:nth-child(2) {
-    background-color: rgba(239, 68, 68, 0.1);
+    background-color: rgba(239, 68, 68, 0.2);
 }
 .wrapper .line-item .button-group-container:nth-child(3) {
-    background-color: rgba(249, 115, 22, 0.1);
+    background-color: rgba(249, 115, 22, 0.2);
 }
 .wrapper .line-item .button-group-container:nth-child(4) {
-    background-color: rgba(34, 197, 94, 0.1);
+    background-color: rgba(34, 197, 94, 0.2);
     border-bottom-right-radius: 6px;
 }
   
@@ -199,4 +186,54 @@ button svg {
 .collapsible-content.open {
   max-height: 500px; /* or a large enough value */
   opacity: 1;
+}
+
+
+.bottom_buttons {
+    padding: 5px 10px;
+    display: flex;
+    height: 40px;
+    background-color: transparent;
+    border-top: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.bottom_buttons > div {
+    display: flex;
+    margin: 0px 0px 0px auto;
+}
+
+.bottom_buttons #add-field {
+    height: 100%;
+    background-color: rgba(59, 130, 246, 0.2);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.bottom_buttons .btn {
+    width: 20px;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: rgba(59, 130, 246, 0.2);
+    margin-left: 5px;
+}
+
+
+::-webkit-scrollbar {
+    height: 12px;
+    width: 12px;
+    background: #181d25;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #232631;
+    -webkit-border-radius: 1ex;
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+::-webkit-scrollbar-corner {
+    background: #181d25;
 }

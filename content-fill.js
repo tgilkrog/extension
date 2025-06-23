@@ -6,9 +6,9 @@ chrome.storage.local.get('checkoutData', ({ checkoutData = {} }) => {
     Company: ['Company', 'billingAddress[company]'],
     CVR: ['CVR', 'vatIds[]'],
     Zipcode: ['Zipcode', 'billingAddress[zipcode]'],
-    City: ['City', 'billingAddress[city]'],
     Address: ['Address', 'billingAddress[street]'],
-    Phone: ['Phone', 'billingAddress[phoneNumber]']
+    Phone: ['Phone', 'billingAddress[phoneNumber]'],
+    City: ['City', 'billingAddress[city]'],
   };
 
   for (const [key, selectors] of Object.entries(fieldMapping)) {
@@ -21,8 +21,16 @@ chrome.storage.local.get('checkoutData', ({ checkoutData = {} }) => {
       .find(el => el);
 
     if (selector) {
-      selector.value = value;
-      selector.dispatchEvent(new Event('input', { bubbles: true }));
+      const setValue = () => {
+        selector.value = value;
+        selector.dispatchEvent(new Event('input', { bubbles: true }));
+      };
+
+      if (key === 'City') {
+        setTimeout(setValue, 500);
+      } else {
+        setValue();
+      }
     }
   }
 });

@@ -4,16 +4,9 @@
 }
 
 .settings_top h4{
-    color: white;
-    font-size: 16px;
+    color: #B3A7F7;
+    font-size: 18px;
     margin: 0px 0px 0px 10px;
-}
-
-.settings_btn, .checkout_btn{
-    width: 16px;
-    fill: white;
-    padding: 15px 0px 0px 10px;
-    cursor: pointer;
 }
 
 /* Overlay behind the panel, covers full screen but only clickable on left 10% */
@@ -60,14 +53,22 @@
 }
 
 .settings_close {
-    width: 10px;
+    width: 12.5px;
+    height: 12.5px;
     cursor: pointer;
     display: inline-block;
-    fill: white;
+    fill: #181d25;
+    background-color: #B3A7F7;
+    padding: 5px 10px 10px 10px;
+    border-radius: 6px;
 }
 
 .settings_page .checkout_fields {
-    margin-top: 10px;
+    margin-top: 20px;
+    width: fit-content;
+    background-color: #232631;
+    padding: 5px;
+    border-radius: 6px;
 }
 
 .settings_page .checkout_fields .checkout_fields_list {
@@ -88,7 +89,7 @@
 
 .settings_page .checkout_fields input {
     color: white;
-    background-color: #232631;
+    background-color: #181d25;
     border: none; 
     border-radius: 6px;
     padding: 5px 5px 5px 10px;
